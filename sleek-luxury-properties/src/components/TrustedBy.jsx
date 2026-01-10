@@ -1,4 +1,4 @@
-// src/components/TrustedBy.jsx
+
 import React from "react";
 import { statsData } from "../data/mockData";
 

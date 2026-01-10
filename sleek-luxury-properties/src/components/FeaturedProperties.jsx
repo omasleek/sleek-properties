@@ -1,4 +1,4 @@
-// src/components/FeaturedProperties.jsx
+
 import React from "react";
 import { featuredProperties } from "../data/mockData";
 

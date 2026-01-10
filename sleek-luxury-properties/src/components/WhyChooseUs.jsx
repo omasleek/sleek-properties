@@ -1,4 +1,4 @@
-// src/components/WhyChooseUs.jsx
+
 import React from "react";
 
 const WhyChooseUs = () => {

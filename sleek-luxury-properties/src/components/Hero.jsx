@@ -1,4 +1,4 @@
-// src/components/Hero.jsx
+
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 

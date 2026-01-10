@@ -1,34 +1,52 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { featuredProperties } from "../data/mockData";
+import PropertyModal from "../components/PropertyModal";
 
-const FeaturedProperties = () => {
+const FeaturedPropertiesSection = () => {
+  const [selected, setSelected] = useState(null);
+
   return (
-    <section id="featured-properties" className="py-20 bg-gray-50">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Featured Properties</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featuredProperties.map((property, index) => (
+    <section id="featured-properties" className="py-24">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold mb-12 text-blue-950 dark:text-white">
+          Featured <span className="text-yellow-400">Properties</span>
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProperties.map((p, i) => (
             <div
-              key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              key={i}
+              className="bg-white  dark:bg-blue-900 rounded-xl overflow-hidden shadow hover:-translate-y-2 transition"
             >
               <img
-                src={property.image}
-                alt={property.title}
-                className="w-full h-48 object-cover"
+                src={p.image}
+                alt={p.title}
+                className="h-56 w-full object-cover"
               />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">{property.title}</h3>
-                <p className="text-gray-600">{property.location}</p>
-                <p className="text-lg font-bold">${property.price}</p>
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-semibold text-blue-950 dark:text-white">
+                  {p.title}
+                </h3>
+
+                <p className="text-blue-700 dark:text-blue-300">{p.location}</p>
+
+                <p className="text-yellow-500 font-bold mt-2">₦{p.price}</p>
+
+                <button
+                  onClick={() => setSelected(p)}
+                  className="mt-4 w-full bg-yellow-500 py-2 rounded-lg font-semibold"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <PropertyModal property={selected} onClose={() => setSelected(null)} />
     </section>
   );
 };
 
-export default FeaturedProperties;
+export default FeaturedPropertiesSection;

@@ -3,11 +3,14 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <section className="bg-gold text-navy py-20 text-center">
-      <h2 className="text-3xl font-bold mb-4">
-        Start Your Property Journey Today!
+    <section className="py-24 bg-linear-to-r from-yellow-400 to-yellow-300 text-blue-950 text-center">
+      <h2 className="text-4xl font-extrabold mb-6">
+        Start Your Property Journey Today
       </h2>
-      <a href="#contact" className="bg-navy text-white py-2 px-4 rounded-lg">
+      <a
+        href="#contact"
+        className="inline-block mt-4 px-8 py-3 bg-blue-950 text-white rounded-lg font-semibold shadow hover:bg-blue-900 transition"
+      >
         Contact Us
       </a>
     </section>

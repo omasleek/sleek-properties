@@ -1,23 +1,47 @@
+import React, { useEffect, useState } from "react";
 
-import React from "react";
-import { statsData } from "../data/mockData";
+const stats = [
+  { value: 10000, label: "Happy Clients" },
+  { value: 250, label: "Luxury Properties" },
+  { value: 98, label: "Client Satisfaction (%)" },
+  { value: 15, label: "Years Experience" },
+  { value: 20, label: "Prime Locations" },
+];
 
-const TrustedBy = () => {
+const TrustedBySection = () => {
+  const [counts, setCounts] = useState(stats.map(() => 0));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounts((prev) =>
+        prev.map((num, i) =>
+          num < stats[i].value ? num + Math.ceil(stats[i].value / 60) : num
+        )
+      );
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="trusted-by" className="py-20">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Trusted By</h2>
-        <div className="flex justify-around">
-          {statsData.map((stat, index) => (
-            <div key={index} className="stat-item">
-              <h3 className="text-4xl font-bold">{stat.number}</h3>
-              <p className="text-gray-600">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+    <section id="trusted-by" className="py-24 text-center">
+      <h2 className="text-4xl font-bold mb-14">
+        Trusted <span className="text-yellow-400">By</span>
+      </h2>
+
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto px-6">
+        {stats.map((stat, i) => (
+          <div
+            key={i}
+            className="bg-white dark:bg-blue-900 p-6 rounded-xl shadow"
+          >
+            <h3 className="text-4xl font-bold text-yellow-400">{counts[i]}+</h3>
+            <p className="dark:text-blue-200">{stat.label}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
-export default TrustedBy;
+export default TrustedBySection;

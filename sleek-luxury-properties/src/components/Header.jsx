@@ -1,37 +1,44 @@
+// src/components/Header.jsx
 import React from "react";
 
-const Header = () => {
+const Header = ({ toggleDarkMode }) => {
   return (
-    <header className="bg-white shadow p-4">
+    <header className="bg-white dark:bg-gray-800 shadow p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Properties</h1>
+        <h1 className="text-2xl font-bold text-navy">SLEEK PROPERTIES</h1>
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a href="#features" className="text-gray-700 hover:text-blue-500">
-                Features
+              <a
+                href="#trusted-by"
+                className="text-gray-700 dark:text-gray-300 hover:text-gold"
+              >
+                Trusted By
               </a>
             </li>
             <li>
               <a
-                href="#properties"
-                className="text-gray-700 hover:text-blue-500"
+                href="#featured-properties"
+                className="text-gray-700 dark:text-gray-300 hover:text-gold"
               >
                 Properties
               </a>
             </li>
             <li>
               <a
-                href="#testimonials"
-                className="text-gray-700 hover:text-blue-500"
+                href="#why-choose-us"
+                className="text-gray-700 dark:text-gray-300 hover:text-gold"
               >
-                Testimonials
+                Why Choose Us
               </a>
             </li>
             <li>
-              <a href="#contact" className="text-gray-700 hover:text-blue-500">
-                Contact
-              </a>
+              <button
+                onClick={toggleDarkMode}
+                className="text-gray-700 dark:text-gray-300 hover:text-gold"
+              >
+                Toggle Dark Mode
+              </button>
             </li>
           </ul>
         </nav>

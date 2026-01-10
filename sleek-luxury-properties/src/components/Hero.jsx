@@ -1,18 +1,39 @@
-import React from "react";
+// src/components/Hero.jsx
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 
 const Hero = () => {
+  useEffect(() => {
+    gsap.from(".hero-title", { duration: 1, y: -50, opacity: 0 });
+    gsap.from(".hero-subtitle", {
+      duration: 1,
+      delay: 0.3,
+      y: -50,
+      opacity: 0,
+    });
+    gsap.from(".cta-button", { duration: 1, delay: 0.6, scale: 0, opacity: 0 });
+  }, []);
+
   return (
-    <section className="hero bg-blue-500 text-white py-20">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Find Your Dream Home</h2>
-        <p className="text-lg mb-4">
-          Explore our wide range of properties to find the perfect fit for you.
+    <section className="hero bg-navy text-white h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="hero-title text-5xl font-bold mb-4">
+          Invest Smart, Live Sleek
+        </h1>
+        <p className="hero-subtitle text-lg mb-8">
+          Discover luxury properties that build your future.
         </p>
         <a
-          href="#properties"
-          className="bg-white text-blue-500 py-2 px-4 rounded"
+          href="#featured-properties"
+          className="cta-button bg-gold text-navy py-2 px-4 rounded-lg shadow hover:bg-opacity-75"
         >
           Explore Properties
+        </a>
+        <a
+          href="#contact"
+          className="cta-button ml-4 bg-gold text-navy py-2 px-4 rounded-lg shadow hover:bg-opacity-75"
+        >
+          Contact Agent
         </a>
       </div>
     </section>

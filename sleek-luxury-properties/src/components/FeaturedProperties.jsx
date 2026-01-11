@@ -19,7 +19,7 @@ const FeaturedPropertiesSection = () => {
           {featuredProperties.map((p, i) => (
             <div
               key={i}
-              className="bg-white  dark:bg-blue-900 rounded-xl overflow-hidden shadow hover:-translate-y-2 transition"
+              className="bg-white sm:dark:bg-white md:dark:bg-white lg:dark:bg-blue-900 rounded-xl overflow-hidden shadow hover:-translate-y-2 transition"
             >
               <img
                 src={p.image}

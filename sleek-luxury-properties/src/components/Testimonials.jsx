@@ -64,16 +64,22 @@ const Testimonials = () => {
         Client <span className="text-yellow-400">Testimonials</span>
       </h2>
 
-      <div className="max-w-xl mx-auto bg-white dark:bg-blue-900 p-8 rounded-xl shadow-lg transition">
+      <div className="max-w-xl mx-auto bg-white sm:dark:bg-white md:dark:bg-white lg:dark:bg-blue-900 p-8 rounded-xl shadow-lg transition">
         <img
           src={t.image}
           alt={t.name}
           className="w-20 h-20 mx-auto rounded-full mb-4"
         />
-        <p className="italic text-gray-600 sm:dark:text-white md:dark:text-white lg:dark:text-white mb-4">"{t.text}"</p>
-        <h4 className="font-semibold text-blue-900 sm:dark:text-white md:dark:text-white lg:dark:text-white">{t.name}</h4>
+        <p className="italic text-gray-600 sm:dark:text-white md:dark:text-white lg:dark:text-white mb-4">
+          "{t.text}"
+        </p>
+        <h4 className="font-semibold text-blue-900 sm:dark:text-white md:dark:text-white lg:dark:text-white">
+          {t.name}
+        </h4>
 
-        <p className="text-sm text-blue-600 sm:dark:text-white md:dark:text-white lg:dark:text-white">{t.role}</p>
+        <p className="text-sm text-blue-600 sm:dark:text-white md:dark:text-white lg:dark:text-white">
+          {t.role}
+        </p>
       </div>
     </section>
   );

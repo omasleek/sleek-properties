@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import PropertySearch from "./components/PropertySearch";
@@ -14,15 +14,24 @@ import CallToActionSection from "./sections/CallToActionSection";
 import Footer from "./components/Footer";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false); // Initialize state
+  const [isDarkMode, setIsDarkMode] = useState(false); 
 
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => !prevMode);
   };
 
-  // Store the preference in localStorage
+  
   useEffect(() => {
     localStorage.setItem("dark-mode", isDarkMode);
+  }, [isDarkMode]);
+
+ 
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, [isDarkMode]);
 
   return (
@@ -32,14 +41,14 @@ function App() {
       } pt-20 transition-all`}
     >
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <PropertySearch/>
+      <PropertySearch />
       <HeroSection />
       <TrustedBySection />
       <PropertyList />
       <FeaturedPropertiesSection />
       <PropertyModal />
       <WhyChooseUsSection />
-      <Testimonials/>
+      <Testimonials />
       <CallToActionSection />
       <Footer />
     </div>

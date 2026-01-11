@@ -1,4 +1,4 @@
-// src/data/mockData.js
+
 export const statsData = [
   { number: "500+", label: "Properties Sold" },
   { number: "20+", label: "Years of Experience" },

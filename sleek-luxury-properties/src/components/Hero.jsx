@@ -61,7 +61,7 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 z-0 bg-linear-to-b from-blue-950/80 via-blue-900/70 to-blue-950/90"></div>
 
-      {/* Content */}
+      
       <div className="relative z-10 max-w-5xl px-6 text-center">
         <span className="hero-badge inline-block mb-4 px-4 py-1 rounded-full bg-yellow-500 text-blue-900 font-semibold text-sm">
           Trusted Real Estate Experts
@@ -77,7 +77,7 @@ const HeroSection = () => {
           security, and long-term value.
         </p>
 
-        {/* Buttons */}
+       
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-14">
           <a
             href="#featured-properties"

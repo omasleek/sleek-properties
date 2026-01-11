@@ -8,7 +8,7 @@ const FeaturedPropertiesSection = () => {
   return (
     <section id="featured-properties" className="py-24">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-blue-950 dark:text-white">
+        <h2 className="text-4xl font-bold mb-12 text-yellow-400 dark:text-white">
           Featured <span className="text-yellow-400">Properties</span>
         </h2>
 
@@ -27,7 +27,6 @@ const FeaturedPropertiesSection = () => {
                 <h3 className="text-xl font-semibold text-blue-950 dark:text-white">
                   {p.title}
                 </h3>
-
                 <p className="text-blue-700 dark:text-blue-300">{p.location}</p>
 
                 <p className="text-yellow-500 font-bold mt-2">₦{p.price}</p>

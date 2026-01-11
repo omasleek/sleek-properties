@@ -33,9 +33,11 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         <div className="flex items-center gap-4">
           <button
             onClick={toggleDarkMode}
-            className="hidden sm:px-4 sm:py-2 sm:rounded-lg sm:text-sm sm:font-medium sm:border sm:border-yellow-400 sm:text-yellow-400 sm:hover:bg-yellow-400 sm:hover:text-blue-950 sm:transition px-3 py-1 text-xs border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 transition"
+            className="sm:px-4 sm:py-2 sm:rounded-lg sm:text-sm sm:font-medium sm:border sm:border-yellow-400 sm:text-yellow-400 sm:hover:bg-yellow-400 sm:hover:text-blue-950 sm:transition px-3 py-1 text-xs border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 transition"
           >
-            {isDarkMode ? "Light" : "Dark"}
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2L8 4v2H6a2 2 0 00-2 2v4a6 6 0 0012 0V8a2 2 0 00-2-2h-2V4l-2-2zM7 8a1 1 0 011-1h4a1 1 0 011 1v4a4 4 0 01-8 0V8z" />
+            </svg>
           </button>
 
           <a
@@ -98,7 +100,9 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
               }}
               className="text-left px-3 py-2 rounded-lg text-sm font-medium border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-950 transition"
             >
-              {isDarkMode ? "Light Mode" : "Dark Mode"}
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2L8 4v2H6a2 2 0 00-2 2v4a6 6 0 0012 0V8a2 2 0 00-2-2h-2V4l-2-2zM7 8a1 1 0 011-1h4a1 1 0 011 1v4a4 4 0 01-8 0V8z" />
+              </svg>
             </button>
             <a
               href="#contact"

@@ -25,18 +25,15 @@ const TrustedBySection = () => {
 
   return (
     <section id="trusted-by" className="py-24 text-center">
-      <h2 className="text-4xl font-bold mb-14">
+      <h2 className="text-4xl font-bold mb-14 dark:text-white">
         Trusted <span className="text-yellow-400">By</span>
       </h2>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto px-6">
         {stats.map((stat, i) => (
-          <div
-            key={i}
-            className="bg-white dark:bg-blue-900 p-6 rounded-xl shadow"
-          >
+          <div key={i} className="bg-white p-6 rounded-xl shadow">
             <h3 className="text-4xl font-bold text-yellow-400">{counts[i]}+</h3>
-            <p className="dark:text-blue-200">{stat.label}</p>
+            <p className="text-blue-900 font-medium">{stat.label}</p>
           </div>
         ))}
       </div>

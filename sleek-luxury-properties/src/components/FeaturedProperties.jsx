@@ -8,8 +8,11 @@ const FeaturedPropertiesSection = () => {
   return (
     <section id="featured-properties" className="py-24">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-12 text-yellow-400 dark:text-white">
-          Featured <span className="text-yellow-400">Properties</span>
+        <h2 className="text-4xl font-bold mb-12 text-yellow-400 sm:dark:text-white md:dark:text-white lg:dark:text-white">
+          Featured{" "}
+          <span className="text-yellow-400 sm:dark:text-white md:dark:text-white lg:dark:text-white">
+            Properties
+          </span>
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -24,10 +27,12 @@ const FeaturedPropertiesSection = () => {
                 className="h-56 w-full object-cover"
               />
               <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold text-blue-950 dark:text-white">
+                <h3 className="text-xl font-semibold text-blue-950 sm:dark:text-white md:dark:text-white lg:dark:text-white">
                   {p.title}
                 </h3>
-                <p className="text-blue-700 dark:text-blue-300">{p.location}</p>
+                <p className="text-blue-700 sm:dark:text-white md:dark:text-white lg:dark:text-white">
+                  {p.location}
+                </p>
 
                 <p className="text-yellow-500 font-bold mt-2">₦{p.price}</p>
 

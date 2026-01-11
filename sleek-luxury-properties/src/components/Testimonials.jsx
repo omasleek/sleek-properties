@@ -60,7 +60,7 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-24 text-center">
-      <h2 className="text-4xl font-bold mb-10 dark:text-white">
+      <h2 className="text-4xl font-bold mb-10 sm:dark:text-white md:dark:text-white lg:dark:text-white">
         Client <span className="text-yellow-400">Testimonials</span>
       </h2>
 
@@ -70,10 +70,10 @@ const Testimonials = () => {
           alt={t.name}
           className="w-20 h-20 mx-auto rounded-full mb-4"
         />
-        <p className="italic text-gray-600 dark:text-white mb-4">"{t.text}"</p>
-        <h4 className="font-semibold text-blue-900">{t.name}</h4>
+        <p className="italic text-gray-600 sm:dark:text-white md:dark:text-white lg:dark:text-white mb-4">"{t.text}"</p>
+        <h4 className="font-semibold text-blue-900 sm:dark:text-white md:dark:text-white lg:dark:text-white">{t.name}</h4>
 
-        <p className="text-sm text-blue-600">{t.role}</p>
+        <p className="text-sm text-blue-600 sm:dark:text-white md:dark:text-white lg:dark:text-white">{t.role}</p>
       </div>
     </section>
   );
